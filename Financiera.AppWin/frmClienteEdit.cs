@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Financiera.Dominio;
+using Financiera.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,24 @@ namespace Financiera.AppWin
 {
     public partial class frmClienteEdit : Form
     {
-        public frmClienteEdit()
+        Cliente cliente;
+
+        public frmClienteEdit(Cliente cliente)
         {
             InitializeComponent();
+            this.cliente = cliente;
+        }
+
+        private void iniciarFormulario(object sender, EventArgs e)
+        {
+            cargarDatos();
+        }
+
+        private void cargarDatos()
+        {
+            cboTipoDocumento.DataSource = TipoDocumentoBL.Listar();
+            cboTipoDocumento.DisplayMember = "Nombre";
+            cboTipoDocumento.ValueMember = "ID";
         }
     }
 }

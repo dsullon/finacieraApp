@@ -204,7 +204,9 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "frmClienteEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.iniciarFormulario);
             this.ResumeLayout(false);
             this.PerformLayout();
 

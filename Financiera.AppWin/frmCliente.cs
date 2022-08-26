@@ -1,4 +1,5 @@
-﻿using Financiera.Logic;
+﻿using Financiera.Dominio;
+using Financiera.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,16 @@ namespace Financiera.AppWin
                 dgvListado.Rows.Add(cliente.ID, cliente.NombreCompleto, cliente.Direccion);
             }
             
+        }
+
+        private void nuevoRegistro(object sender, EventArgs e)
+        {
+            var nuevoCliente = new Cliente();
+            var frm = new frmClienteEdit(nuevoCliente);
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
