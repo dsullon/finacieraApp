@@ -26,10 +26,11 @@ namespace Financiera.Data
                                 cliente.ID = int.Parse(lector[0].ToString());
                                 cliente.Nombres = lector[1].ToString();
                                 cliente.Apellidos = lector[2].ToString();
-                                cliente.Dirección = lector[3].ToString();
+                                cliente.Direccion = lector[3].ToString();
                                 cliente.Referencia = lector[4].ToString();
                                 cliente.IdTipoCliente = int.Parse(lector[5].ToString());
                                 cliente.IdTipoDocumento = int.Parse(lector[6].ToString());
+                                cliente.NumeroDocumento = lector[7].ToString();
 
                                 listado.Add(cliente);
                             }
