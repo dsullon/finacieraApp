@@ -33,17 +33,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboTipoCLiente = new System.Windows.Forms.ComboBox();
+            this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -87,13 +88,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tipo de cliente:";
             // 
-            // cboTipoCLiente
+            // cboTipoCliente
             // 
-            this.cboTipoCLiente.FormattingEnabled = true;
-            this.cboTipoCLiente.Location = new System.Drawing.Point(98, 52);
-            this.cboTipoCLiente.Name = "cboTipoCLiente";
-            this.cboTipoCLiente.Size = new System.Drawing.Size(210, 21);
-            this.cboTipoCLiente.TabIndex = 5;
+            this.cboTipoCliente.FormattingEnabled = true;
+            this.cboTipoCliente.Location = new System.Drawing.Point(98, 52);
+            this.cboTipoCliente.Name = "cboTipoCliente";
+            this.cboTipoCliente.Size = new System.Drawing.Size(210, 21);
+            this.cboTipoCliente.TabIndex = 5;
             // 
             // label4
             // 
@@ -121,12 +122,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Dirección:";
             // 
-            // textBox1
+            // txtDireccion
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(515, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtDireccion.Location = new System.Drawing.Point(98, 106);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(515, 20);
+            this.txtDireccion.TabIndex = 9;
             // 
             // label6
             // 
@@ -137,13 +138,13 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Referencia:";
             // 
-            // textBox2
+            // txtReferencia
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 132);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(515, 90);
-            this.textBox2.TabIndex = 11;
+            this.txtReferencia.Location = new System.Drawing.Point(98, 132);
+            this.txtReferencia.Multiline = true;
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(515, 90);
+            this.txtReferencia.TabIndex = 11;
             // 
             // btnGrabar
             // 
@@ -154,6 +155,7 @@
             this.btnGrabar.TabIndex = 12;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.grabarDatos);
             // 
             // btnCancelar
             // 
@@ -182,22 +184,33 @@
             this.txtNumeroDocumento.Size = new System.Drawing.Size(220, 20);
             this.txtNumeroDocumento.TabIndex = 15;
             // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(12, 232);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(229, 17);
+            this.chkEstado.TabIndex = 16;
+            this.chkEstado.Text = "¿Cliente disponible para proceso de datos?";
+            this.chkEstado.UseVisualStyleBackColor = true;
+            // 
             // frmClienteEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 263);
+            this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.txtNumeroDocumento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtReferencia);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboTipoDocumento);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cboTipoCLiente);
+            this.Controls.Add(this.cboTipoCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label2);
@@ -219,16 +232,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboTipoCLiente;
+        private System.Windows.Forms.ComboBox cboTipoCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboTipoDocumento;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
+        private System.Windows.Forms.CheckBox chkEstado;
     }
 }

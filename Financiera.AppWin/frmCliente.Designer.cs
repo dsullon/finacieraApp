@@ -106,6 +106,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(57, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.editarRegistro);
             // 
             // tsbEliminar
             // 
@@ -114,6 +115,7 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.eliminarRegistro);
             // 
             // frmCliente
             // 
