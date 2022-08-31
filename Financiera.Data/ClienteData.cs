@@ -31,6 +31,7 @@ namespace Financiera.Data
                                 cliente.IdTipoCliente = int.Parse(lector[5].ToString());
                                 cliente.IdTipoDocumento = int.Parse(lector[6].ToString());
                                 cliente.NumeroDocumento = lector[7].ToString();
+                                cliente.Estado = lector[8].ToString() == "1" ? true : false;
 
                                 listado.Add(cliente);
                             }
@@ -64,6 +65,7 @@ namespace Financiera.Data
                             cliente.IdTipoCliente = int.Parse(lector[5].ToString());
                             cliente.IdTipoDocumento = int.Parse(lector[6].ToString());
                             cliente.NumeroDocumento = lector[7].ToString();
+                            cliente.Estado = lector[8].ToString() == "1" ? true : false;
                         }
                     }
                 }
