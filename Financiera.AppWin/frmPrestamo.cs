@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Financiera.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace Financiera.AppWin
         public frmPrestamo()
         {
             InitializeComponent();
+        }
+
+        private void nuevoRegistro(object sender, EventArgs e)
+        {
+            var prestamo = new Prestamo();
+            var frm = new frmPrestamoEdit(prestamo);
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
