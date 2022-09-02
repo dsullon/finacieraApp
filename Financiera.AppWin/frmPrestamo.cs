@@ -27,5 +27,13 @@ namespace Financiera.AppWin
 
             }
         }
+
+        private void verDetalle(object sender, EventArgs e)
+        {
+            var prestamo = new Prestamo();
+            prestamo.ID = 1;
+            var frm = new frmPrestamoEdit(prestamo);
+            frm.ShowDialog();
+        }
     }
 }

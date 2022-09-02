@@ -41,6 +41,8 @@ namespace Financiera.AppWin
         private void iniciarFormulario(object sender, EventArgs e)
         {
             cargarDatos();
+            llDetalle.Visible = prestamo.ID > 0;
+            btnGrabar.Enabled = prestamo.ID == 0;
         }
 
         private void cargarDatos()
@@ -62,6 +64,12 @@ namespace Financiera.AppWin
             prestamo.Importe = decimal.Parse(txtImporte.Text);
             prestamo.Tasa = decimal.Parse(txtTasa.Text);
             prestamo.Plazo = int.Parse(txtPlazo.Text);
+        }
+
+        private void verCuotas(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var frm = new frmCuotas();
+            frm.ShowDialog();
         }
     }
 }

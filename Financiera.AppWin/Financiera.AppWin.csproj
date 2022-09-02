@@ -58,6 +58,12 @@
     <Compile Include="frmClienteEdit.Designer.cs">
       <DependentUpon>frmClienteEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuotas.Designer.cs">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClienteEdit.resx">
       <DependentUpon>frmClienteEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuotas.resx">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrestamo.resx">
       <DependentUpon>frmPrestamo.cs</DependentUpon>

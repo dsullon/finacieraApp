@@ -44,6 +44,7 @@
             this.txtPlazo = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.llDetalle = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -180,11 +181,23 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // llDetalle
+            // 
+            this.llDetalle.AutoSize = true;
+            this.llDetalle.Location = new System.Drawing.Point(12, 165);
+            this.llDetalle.Name = "llDetalle";
+            this.llDetalle.Size = new System.Drawing.Size(145, 13);
+            this.llDetalle.TabIndex = 19;
+            this.llDetalle.TabStop = true;
+            this.llDetalle.Text = "VER DETALLE DE CUOTAS";
+            this.llDetalle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.verCuotas);
+            // 
             // frmPrestamoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 190);
+            this.Controls.Add(this.llDetalle);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtPlazo);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.TextBox txtPlazo;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.LinkLabel llDetalle;
     }
 }
