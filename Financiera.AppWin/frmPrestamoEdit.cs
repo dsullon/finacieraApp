@@ -25,7 +25,17 @@ namespace Financiera.AppWin
             {
                 exito = PrestamoBL.Actualizar(prestamo);
             }
-            this.DialogResult = DialogResult.OK;
+            if (exito)
+            {
+                MessageBox.Show("El préstamo ha sido registrado", "Financiera", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido completar la operación", "Financiera",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void iniciarFormulario(object sender, EventArgs e)
